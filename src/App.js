@@ -49,12 +49,6 @@ function App() {
         
         <AuthProvider>
         <Routes >
-        {/* <Route path="/*" element={
-                                  <main style={{ padding: "1rem" }}>
-                                      <p>There's nothing here!</p>
-                                   </main>
-                                  }
-        /> */}
           <Route  path="/controlpanel" element={<RequireAuth><ControlPanelLayout><HomePageControlPanel/></ControlPanelLayout></RequireAuth>} />
           <Route  path="/controlpanel/login" element={<LoginPageControlPanel/>} />
         </Routes>
