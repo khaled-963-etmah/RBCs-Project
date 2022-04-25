@@ -50,7 +50,7 @@ const LogIn = () => {
             <Grid item sx={{display:"flex"}}>
               <img src="./RBCsImages/Login.svg" />
             </Grid>
-            <Grid item sx={{maxWidth:"688px",m:10}}>
+            <Grid item sx={{maxWidth:"688px",m:8}}>
               <Typography variant="h5" textAlign="center" color="textSecondary">تقديم الدعم العلمي والمساعدة في رفع المهارة العلمية للطالب الجامعي من
 أجل المساهمة في الارتقاء بالواقع الأكاديمي بشكل خاص والواقع المجتمعي بشكل عام والعمل
 على رفع السوية الثقافية والتوعوية وإيجاد منصة لطرح الأفكار التنموية الهادفة</Typography>
