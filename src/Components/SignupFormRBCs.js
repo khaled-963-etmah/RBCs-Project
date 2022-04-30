@@ -13,6 +13,7 @@ import { Radio, RadioGroup, InputAdornment } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 import { makeStyles } from "@mui/styles";
+import { display } from "@mui/system";
 
 const useStyles = makeStyles({
   //css Classes
@@ -42,6 +43,7 @@ const useStyles = makeStyles({
   text: {
     color: "#bababa",
     textAlign: "right",
+    fontFamily:"Almarai",
     fontSize: "13px",
   },
   span: {
@@ -50,18 +52,13 @@ const useStyles = makeStyles({
     paddingTop: "10px",
     margin: "1px",
     textAlign: "right",
+    fontFamily:"Almarai",
     fontSize: "13px",
   },
   radio: {
     color: "#bababa",
   },
-  Container: {
-    "@media only screen and (max-width: 550px)": {
-      padding: "25px",
-      height: "100%",
-      width: "285px",
-    },
-  },
+
   error: {
     border: "1px solid red",
     backgroundColor: "#e6e4e4",
@@ -77,6 +74,21 @@ const useStyles = makeStyles({
   },
   errortext: {
     color: "#EC5252",
+  },
+  logo:{
+    // marginBottom:"100px",
+    width:"100px",
+    // marginTop:"30px",
+    // marginLeft:"15px",
+  },
+  loginbtr:{
+    display:"none",
+    "@media only screen and (max-width: 1412px)": {
+      display:"flex",
+    
+      paddingLeft:"25%",
+      flexDirection:"row-reverse",
+    },
   },
 });
 
@@ -391,7 +403,6 @@ export default function SignupFormRBCs(props) {
       {/*  فورم تسجيل الباينات الشخصية الصفحة الأولى  */}
       <Box
         component={"form"}
-        className={classes.Container}
         sx={{ p: 1, height: "100%" }}
         display={formPage.firstPage}
         onSubmit={handleNextPageButton}
@@ -401,6 +412,13 @@ export default function SignupFormRBCs(props) {
         <div>
           {/* المعلومات الشخصية  */}
           <Box>
+            <Box display={"flex"} sx={{flexDirection:"row", width:"100%",mb:10}}>
+              <Link to="/"><img className={classes.logo} src="./RBCsImages/RBCsLogoLogin.svg"/></Link>
+              <Box className={classes.loginbtr} >
+              <Link to="/login"><Button variant="outlined" color="secondary">تسجيل الدخول</Button></Link>
+              </Box>
+            </Box>
+        
             <Typography variant="h5" textAlign={"right"}>
               المعلومات الشخصية
             </Typography>
@@ -653,7 +671,6 @@ export default function SignupFormRBCs(props) {
       {/*  فورم تسجيل الباينات الشخصية الصفحة الثانية  */}
       <Box
         component={"form"}
-        className={classes.Container}
         sx={{ p: 1, height: "100%" }}
         display={formPage.secondPage}
         onSubmit={handleSubmimtButton}
@@ -663,6 +680,12 @@ export default function SignupFormRBCs(props) {
         <div>
           {/* معلومات الجامعة */}
           <Box sx={{ marginTop: "25px" }}>
+          <Box display={"flex"} sx={{flexDirection:"row", width:"100%",mb:10}}>
+              <Link to="/"><img className={classes.logo} src="./RBCsImages/RBCsLogoLogin.svg"/></Link>
+              <Box className={classes.loginbtr} >
+              <Link to="/login"><Button variant="outlined" color="secondary">تسجيل الدخول</Button></Link>
+              </Box>
+            </Box>
             <Typography variant="h5" textAlign={"right"}>
               <span>معلومات الجامعة</span>
             </Typography>

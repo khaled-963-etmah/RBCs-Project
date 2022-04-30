@@ -2,6 +2,7 @@
 import { React, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+
 //material ui libs
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -41,8 +42,11 @@ const useStyles = makeStyles({
     marginTop: "5px",
     fontSize: "14px",
     width: "90%",
+    fontFamily:"Almarai",
+    "&::placeholder":{textAlign: "right"},
     // "&:hover": { border: "2px solid #EC5252", borderRadius: "25px" },
     // "&:focus": { border: "2px solid #EC5252", borderRadius: "25px" },
+    "& input":{textAlign:"right","& placeholder":{textAlign:"right"}},
   },
   text: {
     color: "#747474",
@@ -79,6 +83,13 @@ const useStyles = makeStyles({
   errortext: {
     color:"#EC5252",
   },
+  logo:{
+    marginBottom:"100px",
+    width:"100px",
+    marginTop:"30px",
+    marginLeft:"30px",
+  },
+  
 });
 
 export default function LongInForm() {
@@ -158,8 +169,8 @@ export default function LongInForm() {
 
   return (
     <Box sx={{ Width: "376.4px" }}>
-      <Typography variant="h3" textAlign={"right"} color="textPrimery">
-        {" "}
+      <Link to="/"><img className={classes.logo} src="./RBCsImages/RBCsLogoLogin.svg"/></Link>
+      <Typography variant="h3" textAlign={"right"} color="textPrimery" sx={{mb:2}}>
         تسجيل الدخول
       </Typography>
       <Typography variant="h6" textAlign="right" color="textSecondary">
@@ -198,7 +209,7 @@ export default function LongInForm() {
                 }}
                 endAdornment={
                   <InputAdornment position="start">
-                    {" "}
+          
                     <Divider
                       sx={{ height: 28, m: 0.5 }}
                       orientation="vertical"
