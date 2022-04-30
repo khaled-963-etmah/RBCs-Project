@@ -13,13 +13,21 @@ import { makeStyles } from "@mui/styles";
 const useStyles = makeStyles({
   singup: {
     maxWidth: "526px",
-    paddingRight: "6%",
-    paddingTop: "5%",
-    marginTop: "3%",
-    "@media only screen and (max-width: 700px)": {
+    paddingRight: "100px",
+
+    "@media only screen and (max-width: 1412px)and (min-width: 701px)": {
+      position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -60%)",
       paddingTop: "100px",
-      paddingRight: "25px",
+      paddingRight: "50px",
       paddingBottom: "100px",
+    },
+    "@media only screen and (max-width: 700px)": {
+      paddingTop: "50px",
+      paddingRight: "50px",
+      paddingBottom: "25px",
     },
   },
   image: {
@@ -27,6 +35,11 @@ const useStyles = makeStyles({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+      height: "939px",
+      maxWidth: "839px",
+      display: "flex",
+    "@media only screen and (max-width: 1412px)": {
+      display:"none",},
   },
   icon: {
     color: "#EC5252",
@@ -68,12 +81,7 @@ const SignUp = () => {
         <Grid item display={formPage.firstPage}>
           <Box
             className={classes.image}
-            display={{
-              height: "939px",
-              maxWidth: "839px",
-              xs: "none",
-              sm: "flex",
-            }}
+       
           >
             <Grid
               container
@@ -161,13 +169,7 @@ const SignUp = () => {
         </Grid>
         <Grid item display={formPage.secondPage}>
           <Box
-            className={classes.image}
-            display={{
-              height: "939px",
-              maxWidth: "839px",
-              xs: "none",
-              sm: "flex",
-            }}
+            className={classes.image}    
           >
             <Grid
               container
